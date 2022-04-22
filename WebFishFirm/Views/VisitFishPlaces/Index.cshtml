@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Fishfirm.VisitFishPlace>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Посещения</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<table class="w3-table-all w3-card-4">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateIn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FishingOut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FishPlace)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateIn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOut)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quality)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FishingOut.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FishPlace.Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

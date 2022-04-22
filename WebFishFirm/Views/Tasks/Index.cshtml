@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Fishfirm.Boat>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Задачи</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<table class="w3-table-all w3-card-4">
+    <tr>
+        <th>Task№</th>
+        <th>Task information</th>
+        <th></th>
+    </tr>
+    <tr class="w3-hover-green">
+        <td>1</td>
+        <td>Для каждого катера вывести даты выхода в море с указанием улова</td>
+        <td>
+            <a asp-action="Task1">Execute</a>
+        </td>
+    </tr>
+    <tr class="w3-hover-green">
+        <td>2</td>
+        <td>Вывести список сортов рыбы и для каждого сорта список рейсов с указанием даты выхода и возвращения, количества улова</td>
+        <td>
+            <a asp-action="Task2">Execute</a>
+        </td>
+    </tr>
+    <tr class="w3-hover-red"> @*Решил реализовать только 2 таска, этот по приколу*@
+        <td>3</td>
+        <td>Недоступна</td>
+        <td>
+            <a asp-action="">Execute</a>
+        </td>
+    </tr>
+</table>

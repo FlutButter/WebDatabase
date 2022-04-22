@@ -1,0 +1,27 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Task2";
+}
+
+<h1>Task2</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<table class="w3-table-all w3-card-4">
+    <thead>
+        <tr>
+            <th>Результат</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
